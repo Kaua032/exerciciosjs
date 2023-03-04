@@ -7,18 +7,29 @@ let info = document.getElementById("info");
 function horasGastas(horaInicial, minutoInicial, horaFinal, minutoFinal) {
   const minutosFinais = horaFinal * 60 + minutoFinal;
   const minutosIniciais = horaInicial * 60 + minutoInicial;
-  let horasGastas = 0;
-  if (minutosFinais > minutosIniciais) {
-    let minutosGastos = minutosFinais - minutosIniciais;
 
-    while (minutosGastos >= 60) {
-      console.log("entrou");
-      horasGastas++;
-      minutosGastos = minutosGastos - 60;
+  if (minutosFinais > 1440 || minutosIniciais > 1440) {
+    info.innerHTML = `[ERRO]Desculpe mas este horário não existe! Apenas horário até 24 horas, afinal, não estamos em marte para passar de 24 horas.`;
+  } else {
+    let horasGastas = 0;
+    if (minutosFinais > minutosIniciais) {
+      let minutosGastos = minutosFinais - minutosIniciais;
+      while (minutosGastos >= 60) {
+        console.log("entrou");
+        horasGastas++;
+        minutosGastos = minutosGastos - 60;
+      }
+      info.innerHTML = `Você inicio às ${horaInicial}:${minutoInicial} e terminou às ${horaFinal}:${minutoFinal} e gastou ${horasGastas}:${minutosGastos}`;
+    } else if (minutosIniciais > minutosFinais) {
+      let tempoAteMeiaNoite = 1440 - minutosIniciais;
+      let minutosGastos = tempoAteMeiaNoite + minutosFinais;
+      while (minutosGastos >= 60) {
+        console.log("entrou");
+        horasGastas++;
+        minutosGastos = minutosGastos - 60;
+      }
+      info.innerHTML = `Você inicio às ${horaInicial}:${minutoInicial} e terminou às ${horaFinal}:${minutoFinal} e gastou ${horasGastas}:${minutosGastos}`;
     }
-    info.innerHTML = `Você inicio às ${horaInicial}:${minutoInicial} e terminou às ${horaFinal}:${minutoFinal} e gastou ${horasGastas}:${minutosGastos}`;
-  } else if (minutosIniciais > minutosFinais) {
-    const minutosGastos = minutosIniciais - minutosFinais;
   }
 }
 
