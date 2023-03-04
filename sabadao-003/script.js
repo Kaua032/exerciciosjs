@@ -4,9 +4,11 @@ let porcentage = parseFloat(
 );
 let info = document.getElementById("info");
 
-function calculator(numero, porcentagem) {
-  let tirado = numero * (porcentagem / 100);
-  info.innerHTML = `${porcentagem}%  de ${numero} é ${tirado}.`;
+const objeto = { numero: number, porcentagem: porcentage };
+
+function calculator() {
+  let tirado = objeto.numero * (objeto.porcentagem / 100);
+  info.innerHTML = `${objeto.numero}%  de ${objeto.porcentagem} é ${tirado}.`;
 }
 
 calculator(number, porcentage);
