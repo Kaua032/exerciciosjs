@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#open{
+    padding: 15px 50px;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 5px;
+}
+
+#all{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(201, 201, 201, 0.637);
+}
+.blocoModal{
+    width: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    background: rgb(78, 76, 76);
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 7px black;
+}
+#head{
+    display: flex;
+    justify-content: space-between;
+}
+#close{
+    padding: 5px 10px;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 20px;
+}
