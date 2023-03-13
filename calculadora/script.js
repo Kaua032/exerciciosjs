@@ -6,7 +6,7 @@ function praDentro(text){
     input.value += text
 }
 limpar.addEventListener("click", () =>{
-    historic.innerHTML = ""
+    historic.innerHTML = "0="
     input.value = ""
 })
 function calculator(){
@@ -14,7 +14,8 @@ function calculator(){
     input.value = eval(input.value)
 }
 mudar.addEventListener("click", () =>{
-    input.value = `${Math.abs(Number(input.value))}`   
+    let pass = Math.abs(Number(input.value))
+    input.value = `${pass}`   
 })
 
 addEventListener("keydown", (tecla)=>{

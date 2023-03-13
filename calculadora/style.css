@@ -58,6 +58,9 @@ button:hover{
 #input_result:active{
     outline: none;
 }
+#input_result::placeholder{
+    color: #00EAB6;
+}
 #nothing{
     background: #282828;
     display: none;
