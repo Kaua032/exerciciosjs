@@ -44,5 +44,41 @@
             </tr>
         </table>
     </div>
+    <div id="calculator_part2">
+        <div id="desenho_area">
+            <canvas></canvas>
+        </div>
+        <div>
+            <input type="range" max="10" min="1" id="size_slider"  value="1">
+        </div>
+        <div id="painel">
+            <div class="row">
+                <ul class="options">
+                    <li>
+                        <img class="options_img" id="brush" onclick="work(this.id)" src="./icons/lapis.png" alt="">
+                    </li>
+                    <li>
+                        <img class="options_img" id="eraser" onclick="work(this.id)" src="./icons/borracha.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="row_colors">
+                <ul class="options">
+                    <li class="option selected"></li>
+                    <li class="option">
+                    </li>
+                    <li class="option">
+                    </li>
+                    <li class="option">
+                    </li>
+                    <li class="option">
+                    </li>
+                </ul>
+            </div>
+            <div id="btn-clear">
+                <button>CLEAR</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

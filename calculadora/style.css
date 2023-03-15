@@ -12,14 +12,18 @@ body{
     justify-content: center;
     height: 100vh;
     background: linear-gradient(135deg, rgba(70,119,138,1) 0%, rgba(21,166,136,1) 85%);
+    gap: 5px;
+    flex-wrap: wrap;
 }
 #calculator{
     background: #282828;
     width: 320px;
     height: 24.5rem;
     border-radius: 10px;
-    border: 1px solid #fff;
+    border: 1px solid rgb(102, 102, 102);
     padding: 5px;
+    display: flex;
+    flex-direction: column;
 }
 table{
     width: 100%;
@@ -47,13 +51,16 @@ button:hover{
     background: #292929;
 }
 #input_result{
-    width: 100%;
+    display: flex;
+    width: 98%;
     background: #282828;
     border: none;
     height: 50px;
     color: #00EAB6;
     text-align: end;
     font-size:  larger;
+    margin: auto;
+    flex-wrap: wrap;
 }
 #input_result:active{
     outline: none;
@@ -71,4 +78,89 @@ button:hover{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+
+/*DESIGN OF CANVAS*/
+#calculator_part2{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2px;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+
+/*DESIGN OF PAINEL*/
+#painel{
+    display: flex;
+    background: #282828;
+    border-radius: 10px;
+    height: 4rem;
+    align-items: center;
+    justify-content: space-around;
+}
+/*DESIGN IMAGES FROM PAINEL*/
+.options_img{
+    width: 1.2rem;
+    cursor: pointer;
+}
+.row{
+    width: 15%;
+}
+.row .options{
+    justify-content: space-between;
+}
+
+/*DESIGN OF COLORS FROM PAINEL*/
+.row_colors{
+    width: 40%;
+}
+.row_colors .options{
+    display: flex;
+    justify-content: space-between;
+}
+.row_colors .option {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.row_colors .option:nth-child(1){
+    background-color: white;
+}
+.row_colors .option:nth-child(2){
+    background-color: red;
+}
+.row_colors .option:nth-child(3){
+    background-color: yellow;
+}
+.row_colors .option:nth-child(4){
+    background-color: green;
+}
+.row_colors .option:nth-child(5){
+    background-color: blue;
+}
+/*DESIGN OF BUTTON CLEAR FROM CANVAS*/
+#btn-clear button{
+    color: #fff;
+    background: #141414;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+}
+
+
+/*DESIGN OF CANVAS-AREA*/
+#desenho_area{
+    width: 320px;
+    height: 18.8rem;
+    border: 4px solid #212121;
+    background: #000;
+    border-radius: 10px;
+}
+canvas{
+    height: 100%;
+    width: 100%;
 }
