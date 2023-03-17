@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #111827;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    width: 58%;
+    justify-content: center;
+    margin-top: 80px;
+}
+#img_forms{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    flex-wrap: wrap;
+}
+#img_bg{
+    background-image: url(./img/image.png);
+    width: 576px;
+    height: 476.48px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 75px;
+    color: #fff;
+}
+form{
+    background: #F9F9FB;
+    display: flex;
+    flex-direction: column;
+    width: 37%;
+    height: 334px;
+    padding: 55px 40px 54px 40px;
+    gap: 24px;
+}
+#login_title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 47px;
+    margin: 0px auto 0px auto;
+}
+.input_information{
+    height: 48px;
+    border-radius: 4px;
+    border: none;
+    padding-left: 40px;
+    display: flex;
+}
+#login{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    background: #7180B9;
+    border-radius: 4px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+}
+#github_login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#github_login p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+#github_login button{
+    border-radius: 4px;
+    width: 244px;
+    height: 48px;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    background: url(./icons/github.png) #7180B9 no-repeat;
+    background-position: 55px 10px;
+}
+#for_email{
+    background: url(./icons/email.png) rgba(113, 128, 185, 0.32) no-repeat;
+    background-position: 10px;
+}
+#for_password{
+    background: url(./icons/senha.png) rgba(113, 128, 185, 0.32) no-repeat;
+    background-position: 10px;
+}
+hr{
+    width: 124px;
+    margin: 0px auto 0px auto;
+}
