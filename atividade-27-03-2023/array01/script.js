@@ -1,8 +1,7 @@
 let objetos = ['Cadeira', 'Impressora', 'Garfo']
 let input = document.getElementById("newElement")
-let btnAdd = document.getElementById("add")
 
-btnAdd.addEventListener('click', () =>{
+document.getElementById("add").addEventListener('click', () =>{
     if(input.value != ''){
         if(objetos.includes(input.value) == false){
             objetos.push(input.value)
@@ -13,4 +12,9 @@ btnAdd.addEventListener('click', () =>{
     else{
         alert("Informe um valor válido.")
     }
+})
+
+document.getElementById("order").addEventListener("click", () =>{
+    objetos = objetos.sort()
+    console.log(objetos)
 })
