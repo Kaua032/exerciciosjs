@@ -38,7 +38,7 @@ main section{
 
 main section .column-left{
     color: #fff;
-    background: #0359a1;
+    background: #7509ac;
     width: 500px;
     height: 460px;
     padding: 3.2rem;
@@ -71,6 +71,17 @@ main section .column-left .networks{
 main section .column-left .networks i {
     font-size: 2.4rem;
     font-weight: 600;
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 1010px){
