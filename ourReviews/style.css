@@ -3,6 +3,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: "poppins", sans-serif;
 }
 body{
     display: flex;
@@ -16,6 +17,7 @@ main{
     height: 90%;
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
 }
 header{
     display: flex;
@@ -27,8 +29,22 @@ header{
 }
 header div{
     width: 70px;
-    height: 3px;
-    background: rgb(49, 15, 243);
+    height: 4px;
+    background: #73ADDA;
+}
+h1{
+    font-size: 4rem;
+}
+#informationUser{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h2{
+    text-align: center;
+}
+#informationUser a {
+    text-align: center;
 }
 section{
     background-color: #fff;
@@ -40,8 +56,78 @@ section{
     font-family: "poppins", sans-serif;
     gap: 20px;
 }
+#img{
+    display: flex;
+    height: 200px;
+}
 section img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    object-fit: cover;
+
+    box-shadow: 10px -5px 0px #3DA0EC;
+}
+#double{
+    width: 50px;
+    height: 50px;
+    background-color: #3DA0EC;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+}
+#double p{
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    font-size: 90px;
+    height: 75px;
+}
+#webDeveloper{
+    text-decoration: none;
+    color: #76BBEA;
+}
+section p{
+    text-align: center;
+}
+section i{
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+#navegation{
+    display: flex;
+    gap: 20px;
+}
+#navegation button{
+    border: none;
+    background: white;
+    color: #9CCAEC;
+    cursor: pointer;
+}
+#surpriseBtn{
+    padding: 4px;
+    color: #3DA0EC;
+    border-color:  #3DA0EC;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 1170px){
+    h1{
+        font-size: 3rem;
+    }
+    main{
+        width: 440px;
+    }
+}
+@media (max-width: 500px){
+    main{
+        width: 90%;
+    }
+    h1{
+        font-size: 2rem;
+    }
 }
