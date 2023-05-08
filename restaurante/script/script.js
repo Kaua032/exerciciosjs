@@ -1,4 +1,10 @@
-let menuItems = [
+const menuSection = document.getElementById("menu")
+const btnBreakfast = document.getElementById("breakfast")
+const btnLunch = document.getElementById("lunch")
+const btnShakes = document.getElementById("shakes")
+const btnDinner = document.getElementById("dinner")
+
+const menuItems = [
     {
         class: "breakfast",
         title: "Buttermilk Pancakes",
@@ -63,17 +69,14 @@ let menuItems = [
         url: "./images/item-9.jpeg"
     },
     {
-        class: "lunch",
+        class: "dinner",
         title: "Stack Dinner",
         price: "R$39.99",
         description: "I'm baby woke milshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed",
         url: "./images/item-10.jpeg"
     }
 ]
-let menuSection = document.getElementById("menu")
-let btnBreakfast = document.getElementById("breakfast")
-let btnLunch = document.getElementById("lunch")
-let btnShakes = document.getElementById("shakes")
+
 
 function write(item){
     menuSection.innerHTML +=` 
@@ -124,6 +127,16 @@ btnShakes.addEventListener("click", ()=>{
     for(let i = 0; i < menuItems.length; i++){
         let presentItem = menuItems[i]
         if(presentItem.class == "shakes"){
+            write(presentItem)
+        }
+    }
+})
+
+btnDinner.addEventListener("click", ()=>{
+    menuSection.innerHTML = ""
+    for(let i = 0; i < menuItems.length; i++){
+        let presentItem = menuItems[i]
+        if(presentItem.class == "dinner"){
             write(presentItem)
         }
     }
